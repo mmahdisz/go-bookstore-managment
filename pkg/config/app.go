@@ -10,7 +10,7 @@ var (
 )
 
 func Connect() {
-	d, err := gorm.Open("postgres", "postgres:1234/gobookstore?charset=utf/&parseTime=True&loc=Local")
+	d, err := gorm.Open("postgres", "host=localhost port=5432 user=postgres dbname=go_bookstore password=1234 sslmode=disable")
 	if err != nil {
 		panic(err)
 	}
